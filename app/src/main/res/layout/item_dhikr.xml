@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/background_card"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cairo_bold"
+            tools:text="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ" />
+
+        <!-- Arabic Text -->
+        <TextView
+            android:id="@+id/textViewArabicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cairo_bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:text="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ" />
+
+        <!-- Translation -->
+        <TextView
+            android:id="@+id/textViewTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="سبحان الله وبحمده"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:text="سبحان الله وبحمده" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="من قالها مائة مرة غفرت ذنوبه وإن كانت مثل زبد البحر"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center"
+            android:layout_gravity="center"
+            tools:text="من قالها مائة مرة غفرت ذنوبه وإن كانت مثل زبد البحر" />
+
+        <!-- Progress Bar -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="8dp" />
+
+        <!-- Counter Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Minus Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonMinus"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                app:icon="@drawable/ic_remove"
+                app:iconTint="@color/primary" />
+
+            <!-- Count Display -->
+            <TextView
+                android:id="@+id/textViewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="0/100"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cairo_bold"
+                tools:text="0/100" />
+
+            <!-- Plus Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPlus"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                app:icon="@drawable/ic_add"
+                app:iconTint="@color/primary" />
+
+            <!-- Reset Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonReset"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                app:icon="@drawable/ic_refresh"
+                app:iconTint="@color/text_secondary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.AmmarApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/background_primary</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/background_primary</item>
+        
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Navigation bar color -->
+        <item name="android:navigationBarColor">@color/background_primary</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background_primary</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorTertiary">@color/text_disabled</item>
+        
+        <!-- Shape styles -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AmmarApp.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AmmarApp.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AmmarApp.LargeComponent</item>
+        
+        <!-- Typography -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.AmmarApp.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.AmmarApp.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.AmmarApp.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.AmmarApp.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.AmmarApp.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.AmmarApp.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.AmmarApp.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.AmmarApp.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.AmmarApp.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.AmmarApp.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.AmmarApp.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.AmmarApp.LabelSmall</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="Theme.AmmarApp.Dark" parent="Theme.AmmarApp">
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_variant_dark</item>
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.AmmarApp.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.AmmarApp.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.AmmarApp.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Typography Styles -->
+    <style name="TextAppearance.AmmarApp.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_bold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_bold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_bold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_regular</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_regular</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/cairo_regular</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">@font/cairo_medium</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">@font/cairo_medium</item>
+    </style>
+
+    <style name="TextAppearance.AmmarApp.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/text_disabled</item>
+        <item name="android:fontFamily">@font/cairo_medium</item>
+    </style>
+
+    <!-- Custom Component Styles -->
+    <style name="Widget.AmmarApp.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/background_card</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <style name="Widget.AmmarApp.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/background_primary</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Widget.AmmarApp.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/cairo_semibold</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Widget.AmmarApp.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="tint">@color/background_primary</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">8dp</item>
+    </style>
+</resources>

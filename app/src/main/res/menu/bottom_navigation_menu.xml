@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/nav_quran"
+        android:icon="@drawable/ic_quran"
+        android:title="@string/nav_quran" />
+        
+    <item
+        android:id="@+id/nav_morning_dhikr"
+        android:icon="@drawable/ic_morning"
+        android:title="@string/nav_morning_dhikr" />
+        
+    <item
+        android:id="@+id/nav_evening_dhikr"
+        android:icon="@drawable/ic_evening"
+        android:title="@string/nav_evening_dhikr" />
+        
+    <item
+        android:id="@+id/nav_hadith"
+        android:icon="@drawable/ic_hadith"
+        android:title="@string/nav_hadith" />
+        
+    <item
+        android:id="@+id/nav_tasbih"
+        android:icon="@drawable/ic_tasbih"
+        android:title="@string/nav_tasbih" />
+        
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/nav_settings" />
+        
+</menu>
