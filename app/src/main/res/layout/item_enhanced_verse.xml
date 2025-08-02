@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_verse"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="4dp"
+    app:cardCornerRadius="16dp"
+    app:rippleColor="@color/primary_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- رأس الآية -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- رقم الآية -->
+            <TextView
+                android:id="@+id/tv_verse_number"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/verse_number_circle"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cairo_bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- معلومات الصفحة والجزء -->
+            <TextView
+                android:id="@+id/tv_page_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/info_badge_background"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="ص 1"
+                android:textColor="@color/text_light"
+                android:textSize="11sp"
+                android:fontFamily="@font/cairo_medium" />
+
+            <TextView
+                android:id="@+id/tv_juz_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/info_badge_background"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="ج 1"
+                android:textColor="@color/text_light"
+                android:textSize="11sp"
+                android:fontFamily="@font/cairo_medium" />
+
+            <!-- أزرار التحكم -->
+            <ImageButton
+                android:id="@+id/btn_bookmark"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_bookmark_border"
+                android:contentDescription="إضافة علامة مرجعية"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btn_share"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="4dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_share"
+                android:contentDescription="مشاركة الآية"
+                android:padding="4dp" />
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_more_vert"
+                android:contentDescription="المزيد من الخيارات"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+        <!-- النص العربي للآية -->
+        <TextView
+            android:id="@+id/tv_arabic_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:text="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+            android:textColor="@color/text_color"
+            android:textDirection="rtl"
+            android:textSize="20sp"
+            android:textIsSelectable="true" />
+
+        <!-- فاصل خفيف -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/divider_color"
+            android:alpha="0.3" />
+
+        <!-- الترجمة -->
+        <TextView
+            android:id="@+id/tv_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/cairo_regular"
+            android:lineSpacingExtra="4dp"
+            android:text="In the name of Allah, the Entirely Merciful, the Especially Merciful."
+            android:textColor="@color/text_secondary"
+            android:textDirection="ltr"
+            android:textSize="16sp"
+            android:textIsSelectable="true"
+            android:visibility="gone" />
+
+        <!-- التفسير -->
+        <LinearLayout
+            android:id="@+id/layout_tafseer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tafseer_background"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="التفسير:"
+                android:textStyle="bold"
+                android:textColor="@color/primary_color"
+                android:textSize="14sp"
+                android:fontFamily="@font/cairo_bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_tafseer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_regular"
+                android:lineSpacingExtra="4dp"
+                android:text="تفسير الآية الكريمة..."
+                android:textColor="@color/text_secondary"
+                android:textDirection="rtl"
+                android:textSize="14sp"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <!-- خط فاصل للآيات الطويلة -->
+        <View
+            android:id="@+id/verse_separator"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/verse_separator_background"
+            android:alpha="0.6" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
