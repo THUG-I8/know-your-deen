@@ -14,7 +14,7 @@ class IslamicKnowledgeFragment : Fragment() {
 
     private var _binding: FragmentIslamicKnowledgeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var knowledgeAdapter: IslamicKnowledgeAdapter
+    private lateinit var adapter: IslamicKnowledgeAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,13 +32,14 @@ class IslamicKnowledgeFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        knowledgeAdapter = IslamicKnowledgeAdapter { knowledge ->
-            openKnowledgeItem(knowledge)
+        adapter = IslamicKnowledgeAdapter { knowledge ->
+            // Handle item click - show detailed content
+            showKnowledgeDetails(knowledge)
         }
         
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
-            adapter = knowledgeAdapter
+            adapter = this@IslamicKnowledgeFragment.adapter
         }
     }
 
@@ -49,81 +50,99 @@ class IslamicKnowledgeFragment : Fragment() {
                 title = "العقيدة الإسلامية",
                 subtitle = "أصول الإيمان والإسلام",
                 description = "تعلم أساسيات العقيدة الإسلامية وأركان الإيمان والإسلام",
-                category = "عقيدة",
-                iconResId = R.drawable.ic_quran,
-                backgroundColor = "#74C3F5"
+                icon = "🕌",
+                color = "#74C3F5",
+                content = listOf(
+                    "أركان الإيمان الستة",
+                    "أركان الإسلام الخمسة",
+                    "التوحيد وأقسامه",
+                    "أسماء الله الحسنى",
+                    "صفات الله تعالى"
+                )
             ),
             IslamicKnowledge(
                 id = 2,
                 title = "الفقه الإسلامي",
                 subtitle = "أحكام العبادات والمعاملات",
-                description = "أحكام الصلاة والصيام والزكاة والحج والمعاملات المالية",
-                category = "فقه",
-                iconResId = R.drawable.ic_quran,
-                backgroundColor = "#AB74F5"
+                description = "تعلم أحكام الصلاة والصيام والزكاة والحج والمعاملات",
+                icon = "📖",
+                color = "#AB74F5",
+                content = listOf(
+                    "أحكام الطهارة",
+                    "أحكام الصلاة",
+                    "أحكام الصيام",
+                    "أحكام الزكاة",
+                    "أحكام الحج والعمرة"
+                )
             ),
             IslamicKnowledge(
                 id = 3,
                 title = "السيرة النبوية",
                 subtitle = "حياة النبي محمد ﷺ",
-                description = "سيرة النبي محمد ﷺ وأحداث حياته وأخلاقه الكريمة",
-                category = "سيرة",
-                iconResId = R.drawable.ic_hadith,
-                backgroundColor = "#F59173"
+                description = "تعرف على سيرة النبي محمد ﷺ وأخلاقه وأعماله",
+                icon = "🌙",
+                color = "#F59173",
+                content = listOf(
+                    "مولد النبي ﷺ",
+                    "نشأة النبي ﷺ",
+                    "البعثة النبوية",
+                    "الهجرة إلى المدينة",
+                    "الفتوحات الإسلامية"
+                )
             ),
             IslamicKnowledge(
                 id = 4,
-                title = "الأدعية والأذكار",
-                subtitle = "أدعية مأثورة وأذكار يومية",
-                description = "أدعية النبي ﷺ وأذكار الصباح والمساء وأدعية مأثورة",
-                category = "أدعية",
-                iconResId = R.drawable.ic_morning,
-                backgroundColor = "#644680"
+                title = "الأداب الإسلامية",
+                subtitle = "آداب المسلم في حياته",
+                description = "تعلم الآداب الإسلامية في التعامل مع الناس",
+                icon = "🤝",
+                color = "#E0963F",
+                content = listOf(
+                    "آداب الطعام والشراب",
+                    "آداب المسجد",
+                    "آداب الزيارة",
+                    "آداب السفر",
+                    "آداب النوم والاستيقاظ"
+                )
             ),
             IslamicKnowledge(
                 id = 5,
-                title = "الأحاديث النبوية",
-                subtitle = "السنة النبوية الشريفة",
-                description = "أحاديث النبي ﷺ الصحيحة مع شرحها وفوائدها",
-                category = "حديث",
-                iconResId = R.drawable.ic_hadith,
-                backgroundColor = "#F57492"
+                title = "الأخلاق الإسلامية",
+                subtitle = "مكارم الأخلاق",
+                description = "تعلم الأخلاق الحميدة التي حث عليها الإسلام",
+                icon = "💎",
+                color = "#F57492",
+                content = listOf(
+                    "الصدق والأمانة",
+                    "الصبر والتحمل",
+                    "التواضع والكرم",
+                    "الرحمة والعطف",
+                    "العدل والإحسان"
+                )
             ),
             IslamicKnowledge(
                 id = 6,
-                title = "الأخلاق الإسلامية",
-                subtitle = "مكارم الأخلاق",
-                description = "الأخلاق الحميدة والصفات الكريمة في الإسلام",
-                category = "أخلاق",
-                iconResId = R.drawable.ic_settings,
-                backgroundColor = "#F59173"
-            ),
-            IslamicKnowledge(
-                id = 7,
-                title = "التفسير القرآني",
-                subtitle = "تفسير القرآن الكريم",
-                description = "تفسير آيات القرآن الكريم وبيان معانيها",
-                category = "تفسير",
-                iconResId = R.drawable.ic_quran,
-                backgroundColor = "#6f6767"
-            ),
-            IslamicKnowledge(
-                id = 8,
-                title = "الآداب الإسلامية",
-                subtitle = "آداب المسلم في حياته",
-                description = "آداب الطعام والشراب والزيارة والكلام وغيرها",
-                category = "آداب",
-                iconResId = R.drawable.ic_settings,
-                backgroundColor = "#E0963F"
+                title = "تفسير القرآن",
+                subtitle = "معاني آيات القرآن الكريم",
+                description = "تعلم تفسير القرآن الكريم وأسباب النزول",
+                icon = "📜",
+                color = "#6f6767",
+                content = listOf(
+                    "أسباب النزول",
+                    "المكي والمدني",
+                    "أحكام القرآن",
+                    "قصص القرآن",
+                    "إعجاز القرآن"
+                )
             )
         )
         
-        knowledgeAdapter.submitList(knowledgeList)
+        adapter.submitList(knowledgeList)
     }
 
-    private fun openKnowledgeItem(knowledge: IslamicKnowledge) {
-        // TODO: Implement opening specific knowledge item
-        // This could open a detailed view or another fragment
+    private fun showKnowledgeDetails(knowledge: IslamicKnowledge) {
+        // TODO: Implement detailed view for each knowledge section
+        // This could open a new fragment or dialog with detailed content
     }
 
     override fun onDestroyView() {

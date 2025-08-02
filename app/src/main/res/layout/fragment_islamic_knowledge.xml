@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_primary">
+    android:background="@color/background_light">
 
     <!-- Header Card -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardBackgroundColor="@color/surface_primary"
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp"
-        app:strokeColor="@color/border_primary"
+        app:strokeColor="@color/border_light"
         app:strokeWidth="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/header_gradient"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -27,35 +27,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/font_certs"
+                android:fontFamily="@font/cairo_bold"
                 android:text="المعرفة الإسلامية"
-                android:textColor="@color/text_primary"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:textColor="@color/white"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/font_certs"
-                android:gravity="center"
-                android:text="تعلم دينك بسهولة ويسر"
-                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/cairo_regular"
+                android:text="تعلم أساسيات الدين الإسلامي"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- RecyclerView -->
+    <!-- RecyclerView for Knowledge Items -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="16dp" />
+        android:padding="8dp" />
 
 </LinearLayout>

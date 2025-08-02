@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary Colors -->
-    <color name="primary">#1E88E5</color>
-    <color name="primary_dark">#1565C0</color>
-    <color name="primary_light">#64B5F6</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
     
     <!-- Secondary Colors -->
-    <color name="secondary">#FFC107</color>
-    <color name="secondary_dark">#FF8F00</color>
-    <color name="secondary_light">#FFE082</color>
+    <color name="secondary">#4CAF50</color>
+    <color name="secondary_dark">#388E3C</color>
+    <color name="secondary_light">#C8E6C9</color>
     
     <!-- Accent Colors -->
-    <color name="accent">#FF5722</color>
-    <color name="accent_purple">#9C27B0</color>
-    <color name="accent_green">#4CAF50</color>
-    <color name="accent_orange">#FF9800</color>
+    <color name="accent">#FF9800</color>
+    <color name="accent_dark">#F57C00</color>
+    <color name="accent_light">#FFE0B2</color>
     
     <!-- Background Colors -->
-    <color name="background_primary">#F5F5F5</color>
-    <color name="background_secondary">#FFFFFF</color>
-    <color name="background_islamic">#F8F9FA</color>
+    <color name="background_primary">#FAFAFA</color>
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#121212</color>
     
     <!-- Surface Colors -->
     <color name="surface_primary">#FFFFFF</color>
     <color name="surface_secondary">#F8F9FA</color>
-    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_dark">#1E1E1E</color>
     
     <!-- Text Colors -->
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
-    <color name="text_hint">#BDBDBD</color>
+    <color name="text_disabled">#BDBDBD</color>
     <color name="text_white">#FFFFFF</color>
     
     <!-- Border Colors -->
     <color name="border_primary">#E0E0E0</color>
-    <color name="border_secondary">#BDBDBD</color>
+    <color name="border_light">#F0F0F0</color>
+    <color name="border_dark">#424242</color>
     
     <!-- Status Colors -->
     <color name="success">#4CAF50</color>
@@ -42,40 +42,27 @@
     <color name="error">#F44336</color>
     <color name="info">#2196F3</color>
     
-    <!-- Islamic Theme Colors -->
-    <color name="islamic_blue">#1E3A8A</color>
-    <color name="islamic_gold">#D4AF37</color>
-    <color name="islamic_green">#059669</color>
-    <color name="islamic_brown">#92400E</color>
-    <color name="islamic_white">#FFFFFF</color>
-    
     <!-- Gradient Colors -->
     <color name="gradient_start_blue">#74C3F5</color>
     <color name="gradient_end_blue">#7398F5</color>
-    <color name="gradient_start_gold">#F59173</color>
-    <color name="gradient_end_gold">#E0963F</color>
-    <color name="gradient_start_purple">#644680</color>
-    <color name="gradient_end_purple">#425aa1</color>
-    <color name="gradient_start_pink">#F57492</color>
-    <color name="gradient_end_pink">#73B4F5</color>
+    <color name="gradient_start_purple">#AB74F5</color>
+    <color name="gradient_end_purple">#737CF5</color>
+    <color name="gradient_start_orange">#F59173</color>
+    <color name="gradient_end_orange">#EC73F5</color>
     <color name="gradient_start_green">#038d51</color>
     <color name="gradient_end_green">#0091a0</color>
-    <color name="gradient_start_gray">#6f6767</color>
-    <color name="gradient_end_gray">#4f3c05</color>
     
     <!-- Shadow Colors -->
     <color name="shadow_light">#1A000000</color>
     <color name="shadow_medium">#33000000</color>
-    <color name="shadow_dark">#66000000</color>
+    <color name="shadow_dark">#4D000000</color>
     
-    <!-- Overlay Colors -->
-    <color name="overlay_light">#1AFFFFFF</color>
-    <color name="overlay_medium">#33FFFFFF</color>
-    <color name="overlay_dark">#66FFFFFF</color>
+    <!-- Ripple Colors -->
+    <color name="ripple_primary">#1F000000</color>
+    <color name="ripple_secondary">#1FFFFFFF</color>
     
-    <!-- White Color -->
+    <!-- White and Black -->
     <color name="white">#FFFFFF</color>
-    
-    <!-- Ripple Color -->
-    <color name="ripple_primary">#1A000000</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

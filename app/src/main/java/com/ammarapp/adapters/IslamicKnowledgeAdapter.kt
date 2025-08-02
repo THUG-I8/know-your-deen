@@ -41,15 +41,14 @@ class IslamicKnowledgeAdapter(
 
         fun bind(knowledge: IslamicKnowledge) {
             binding.apply {
-                titleText.text = knowledge.title
-                subtitleText.text = knowledge.subtitle
-                descriptionText.text = knowledge.description
-                categoryText.text = knowledge.category
-                iconImage.setImageResource(knowledge.iconResId)
+                tvTitle.text = knowledge.title
+                tvSubtitle.text = knowledge.subtitle
+                tvDescription.text = knowledge.description
+                tvIcon.text = knowledge.icon
                 
-                // Set background color
+                // Set background color based on knowledge color
                 try {
-                    val color = Color.parseColor(knowledge.backgroundColor)
+                    val color = Color.parseColor(knowledge.color)
                     cardBackground.setBackgroundColor(color)
                 } catch (e: IllegalArgumentException) {
                     // Use default color if parsing fails

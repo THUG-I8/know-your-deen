@@ -5,7 +5,7 @@ data class IslamicKnowledge(
     val title: String,
     val subtitle: String,
     val description: String,
-    val category: String,
-    val iconResId: Int,
-    val backgroundColor: String
+    val icon: String,
+    val color: String,
+    val content: List<String>
 )
