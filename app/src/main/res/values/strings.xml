@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">عَمار</string>
+    
+    <!-- Navigation -->
+    <string name="nav_quran">المصحف الشريف</string>
+    <string name="nav_morning_dhikr">أذكار الصباح</string>
+    <string name="nav_evening_dhikr">أذكار المساء</string>
+    <string name="nav_hadith">الأحاديث النبوية</string>
+    <string name="nav_tasbih">المسبحة الإلكترونية</string>
+    <string name="nav_settings">الإعدادات</string>
+    
+    <!-- Quran -->
+    <string name="quran_title">المصحف الشريف</string>
+    <string name="quran_search">البحث في القرآن</string>
+    <string name="quran_bookmark">المحفوظات</string>
+    <string name="quran_last_read">آخر قراءة</string>
+    
+    <!-- Dhikr -->
+    <string name="morning_dhikr_title">أذكار الصباح</string>
+    <string name="evening_dhikr_title">أذكار المساء</string>
+    <string name="dhikr_count">العدد: %d</string>
+    <string name="dhikr_reset">إعادة تعيين</string>
+    <string name="dhikr_complete">تم الانتهاء</string>
+    
+    <!-- Hadith -->
+    <string name="hadith_title">الأحاديث النبوية</string>
+    <string name="hadith_search">البحث في الأحاديث</string>
+    <string name="hadith_favorites">المفضلة</string>
+    <string name="hadith_random">حديث عشوائي</string>
+    
+    <!-- Tasbih -->
+    <string name="tasbih_title">المسبحة الإلكترونية</string>
+    <string name="tasbih_count">%d</string>
+    <string name="tasbih_reset">إعادة تعيين</string>
+    <string name="tasbih_vibrate">اهتزاز</string>
+    <string name="tasbih_sound">صوت</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_notifications">الإشعارات</string>
+    <string name="settings_theme">المظهر</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_about">حول التطبيق</string>
+    
+    <!-- Common -->
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="delete">حذف</string>
+    <string name="share">مشاركة</string>
+    <string name="copy">نسخ</string>
+    
+    <!-- Notifications -->
+    <string name="notification_morning_dhikr">حان وقت أذكار الصباح</string>
+    <string name="notification_evening_dhikr">حان وقت أذكار المساء</string>
+    <string name="notification_quran">تذكير بقراءة القرآن</string>
+</resources>
