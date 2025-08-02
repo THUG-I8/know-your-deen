@@ -1,58 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Colors -->
-    <color name="primary">#1E3A8A</color>
-    <color name="primary_dark">#1E40AF</color>
-    <color name="primary_light">#3B82F6</color>
-    <color name="primary_variant">#2563EB</color>
+    <!-- Primary Colors - Inspired by Islamic website -->
+    <color name="primary">#1F4E79</color>
+    <color name="primary_dark">#0D2B4A</color>
+    <color name="primary_light">#2E5A8A</color>
+    <color name="primary_variant">#1A3D5C</color>
     
     <!-- Secondary Colors -->
-    <color name="secondary">#059669</color>
-    <color name="secondary_dark">#047857</color>
-    <color name="secondary_light">#10B981</color>
-    <color name="secondary_variant">#059669</color>
+    <color name="secondary">#8B4513</color>
+    <color name="secondary_dark">#654321</color>
+    <color name="secondary_light">#A0522D</color>
+    <color name="secondary_variant">#8B4513</color>
     
-    <!-- Accent Colors -->
-    <color name="accent_gold">#F59E0B</color>
-    <color name="accent_orange">#F97316</color>
-    <color name="accent_red">#EF4444</color>
-    <color name="accent_purple">#8B5CF6</color>
+    <!-- Accent Colors - Gold and Brown theme -->
+    <color name="accent_gold">#D4AF37</color>
+    <color name="accent_orange">#CD853F</color>
+    <color name="accent_red">#8B0000</color>
+    <color name="accent_purple">#4B0082</color>
+    <color name="accent_brown">#8B4513</color>
+    <color name="accent_cream">#F5F5DC</color>
     
     <!-- Background Colors -->
-    <color name="background_primary">#FFFFFF</color>
-    <color name="background_secondary">#F8FAFC</color>
+    <color name="background_primary">#FAFAFA</color>
+    <color name="background_secondary">#F0F0F0</color>
     <color name="background_card">#FFFFFF</color>
-    <color name="background_dark">#0F172A</color>
-    <color name="background_dark_card">#1E293B</color>
+    <color name="background_dark">#1A1A1A</color>
+    <color name="background_dark_card">#2D2D2D</color>
+    <color name="background_islamic">#F8F6F1</color>
     
     <!-- Surface Colors -->
     <color name="surface">#FFFFFF</color>
-    <color name="surface_dark">#1E293B</color>
-    <color name="surface_variant">#F1F5F9</color>
-    <color name="surface_variant_dark">#334155</color>
+    <color name="surface_dark">#2D2D2D</color>
+    <color name="surface_variant">#F5F5F5</color>
+    <color name="surface_variant_dark">#3D3D3D</color>
     
     <!-- Text Colors -->
-    <color name="text_primary">#1E293B</color>
-    <color name="text_secondary">#64748B</color>
-    <color name="text_disabled">#94A3B8</color>
-    <color name="text_primary_dark">#F1F5F9</color>
-    <color name="text_secondary_dark">#CBD5E1</color>
+    <color name="text_primary">#2C2C2C</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_disabled">#999999</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#CCCCCC</color>
+    <color name="text_islamic">#1F4E79</color>
     
     <!-- Border Colors -->
-    <color name="border_light">#E2E8F0</color>
-    <color name="border_dark">#475569</color>
+    <color name="border_light">#E0E0E0</color>
+    <color name="border_dark">#666666</color>
+    <color name="border_gold">#D4AF37</color>
     
     <!-- Status Colors -->
-    <color name="success">#10B981</color>
-    <color name="warning">#F59E0B</color>
-    <color name="error">#EF4444</color>
-    <color name="info">#3B82F6</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
     
     <!-- Gradient Colors -->
-    <color name="gradient_start">#1E3A8A</color>
-    <color name="gradient_end">#3B82F6</color>
-    <color name="gradient_gold_start">#F59E0B</color>
-    <color name="gradient_gold_end">#F97316</color>
+    <color name="gradient_start">#1F4E79</color>
+    <color name="gradient_end">#2E5A8A</color>
+    <color name="gradient_gold_start">#D4AF37</color>
+    <color name="gradient_gold_end">#CD853F</color>
+    <color name="gradient_brown_start">#8B4513</color>
+    <color name="gradient_brown_end">#A0522D</color>
     
     <!-- Shadow Colors -->
     <color name="shadow_light">#00000008</color>
@@ -64,4 +71,12 @@
     <color name="semi_transparent">#80000000</color>
     <color name="overlay_light">#FFFFFF80</color>
     <color name="overlay_dark">#00000080</color>
+    
+    <!-- Islamic Theme Colors -->
+    <color name="islamic_green">#228B22</color>
+    <color name="islamic_blue">#1F4E79</color>
+    <color name="islamic_gold">#D4AF37</color>
+    <color name="islamic_brown">#8B4513</color>
+    <color name="islamic_cream">#F5F5DC</color>
+    <color name="islamic_white">#FFFFFF</color>
 </resources>
