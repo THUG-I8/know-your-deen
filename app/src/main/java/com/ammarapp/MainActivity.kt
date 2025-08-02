@@ -1,208 +1,104 @@
 package com.ammarapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.GridLayoutManager
-import com.ammarapp.adapters.IslamicFeaturesAdapter
 import com.ammarapp.databinding.ActivityMainBinding
 import com.ammarapp.fragments.*
-import com.ammarapp.models.IslamicFeature
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    
+
     private lateinit var binding: ActivityMainBinding
-    private lateinit var fragmentManager: FragmentManager
-    private lateinit var featuresAdapter: IslamicFeaturesAdapter
-    
+    private var currentFragment: Fragment? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        setupUI()
-        setupFeaturesGrid()
-        setupNavigation()
+
+        setupCardClickListeners()
     }
-    
-    private fun setupUI() {
-        // إعداد شريط الحالة
-        window.statusBarColor = ContextCompat.getColor(this, R.color.islamic_blue)
-        
-        // إعداد شريط التنقل
-        window.navigationBarColor = ContextCompat.getColor(this, R.color.background_islamic)
-        
-        fragmentManager = supportFragmentManager
-    }
-    
-    private fun setupFeaturesGrid() {
-        binding.featuresGrid.layoutManager = GridLayoutManager(this, 2)
-        featuresAdapter = IslamicFeaturesAdapter { feature ->
-            openFeature(feature)
+
+    private fun setupCardClickListeners() {
+        // Quran Card
+        binding.cardQuran.setOnClickListener {
+            loadFragment(QuranFragment(), "quran")
         }
-        binding.featuresGrid.adapter = featuresAdapter
-        
-        loadIslamicFeatures()
-    }
-    
-    private fun loadIslamicFeatures() {
-        val features = listOf(
-            IslamicFeature(
-                id = 1,
-                title = "المصحف الشريف",
-                subtitle = "القرآن الكريم",
-                description = "اقرأ القرآن الكريم كاملاً مع التفسير والترجمة والبحث في السور",
-                iconResId = R.drawable.ic_quran,
-                backgroundColor = ContextCompat.getColor(this, R.color.islamic_blue),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "quran"
-            ),
-            IslamicFeature(
-                id = 2,
-                title = "أذكار الصباح",
-                subtitle = "أذكار الصباح المباركة",
-                description = "أذكار الصباح مع عداد إلكتروني وشريط تقدم مرئي",
-                iconResId = R.drawable.ic_morning,
-                backgroundColor = ContextCompat.getColor(this, R.color.islamic_gold),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "morning_dhikr"
-            ),
-            IslamicFeature(
-                id = 3,
-                title = "أذكار المساء",
-                subtitle = "أذكار المساء المباركة",
-                description = "أذكار المساء مع عداد إلكتروني وشريط تقدم مرئي",
-                iconResId = R.drawable.ic_evening,
-                backgroundColor = ContextCompat.getColor(this, R.color.islamic_brown),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "evening_dhikr"
-            ),
-            IslamicFeature(
-                id = 4,
-                title = "الأحاديث النبوية",
-                subtitle = "السنة النبوية",
-                description = "مجموعة من الأحاديث النبوية الشريفة مع البحث والمفضلة",
-                iconResId = R.drawable.ic_hadith,
-                backgroundColor = ContextCompat.getColor(this, R.color.islamic_green),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "hadith"
-            ),
-            IslamicFeature(
-                id = 5,
-                title = "المسبحة الإلكترونية",
-                subtitle = "التسبيح الرقمي",
-                description = "مسبحة إلكترونية مع اهتزاز وصوت وخيارات متعددة للعدد",
-                iconResId = R.drawable.ic_tasbih,
-                backgroundColor = ContextCompat.getColor(this, R.color.accent_purple),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "tasbih"
-            ),
-            IslamicFeature(
-                id = 6,
-                title = "الإعدادات",
-                subtitle = "تخصيص التطبيق",
-                description = "إعدادات التطبيق والوضع المظلم والإشعارات",
-                iconResId = R.drawable.ic_settings,
-                backgroundColor = ContextCompat.getColor(this, R.color.text_secondary),
-                textColor = ContextCompat.getColor(this, R.color.islamic_white),
-                category = "settings"
-            )
-        )
-        
-        featuresAdapter.submitList(features)
-    }
-    
-    private fun openFeature(feature: IslamicFeature) {
-        when (feature.category) {
-            "quran" -> {
-                loadFragment(QuranFragment(), "quran")
-                binding.bottomNavigation.selectedItemId = R.id.nav_quran
-            }
-            "morning_dhikr" -> {
-                loadFragment(MorningDhikrFragment(), "morning_dhikr")
-                binding.bottomNavigation.selectedItemId = R.id.nav_morning_dhikr
-            }
-            "evening_dhikr" -> {
-                loadFragment(EveningDhikrFragment(), "evening_dhikr")
-                binding.bottomNavigation.selectedItemId = R.id.nav_evening_dhikr
-            }
-            "hadith" -> {
-                loadFragment(HadithFragment(), "hadith")
-                binding.bottomNavigation.selectedItemId = R.id.nav_hadith
-            }
-            "tasbih" -> {
-                loadFragment(TasbihFragment(), "tasbih")
-                binding.bottomNavigation.selectedItemId = R.id.nav_tasbih
-            }
-            "settings" -> {
-                loadFragment(SettingsFragment(), "settings")
-                binding.bottomNavigation.selectedItemId = R.id.nav_settings
-            }
+
+        // Morning Dhikr Card
+        binding.cardMorningDhikr.setOnClickListener {
+            loadFragment(MorningDhikrFragment(), "morning_dhikr")
+        }
+
+        // Evening Dhikr Card
+        binding.cardEveningDhikr.setOnClickListener {
+            loadFragment(EveningDhikrFragment(), "evening_dhikr")
+        }
+
+        // Hadith Card
+        binding.cardHadith.setOnClickListener {
+            loadFragment(HadithFragment(), "hadith")
+        }
+
+        // Tasbih Card
+        binding.cardTasbih.setOnClickListener {
+            loadFragment(TasbihFragment(), "tasbih")
+        }
+
+        // Islamic Knowledge Card
+        binding.cardIslamicKnowledge.setOnClickListener {
+            loadFragment(IslamicKnowledgeFragment(), "islamic_knowledge")
+        }
+
+        // Prayer Times Card
+        binding.cardPrayerTimes.setOnClickListener {
+            loadFragment(PrayerTimesFragment(), "prayer_times")
+        }
+
+        // Settings Card
+        binding.cardSettings.setOnClickListener {
+            loadFragment(SettingsFragment(), "settings")
         }
     }
-    
-    private fun setupNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_quran -> {
-                    loadFragment(QuranFragment(), "quran")
-                    true
-                }
-                R.id.nav_morning_dhikr -> {
-                    loadFragment(MorningDhikrFragment(), "morning_dhikr")
-                    true
-                }
-                R.id.nav_evening_dhikr -> {
-                    loadFragment(EveningDhikrFragment(), "evening_dhikr")
-                    true
-                }
-                R.id.nav_hadith -> {
-                    loadFragment(HadithFragment(), "hadith")
-                    true
-                }
-                R.id.nav_tasbih -> {
-                    loadFragment(TasbihFragment(), "tasbih")
-                    true
-                }
-                R.id.nav_settings -> {
-                    loadFragment(SettingsFragment(), "settings")
-                    true
-                }
-                else -> false
-            }
-        }
-    }
-    
+
     private fun loadFragment(fragment: Fragment, tag: String) {
-        val transaction: FragmentTransaction = fragmentManager.beginTransaction()
+        // Show fragment container and hide cards
+        binding.fragmentContainer.visibility = View.VISIBLE
         
-        // إخفاء جميع الشاشات
-        val fragments = fragmentManager.fragments
-        for (frag in fragments) {
-            transaction.hide(frag)
-        }
-        
-        // إظهار الشاشة المطلوبة أو إضافتها إذا لم تكن موجودة
-        if (fragmentManager.findFragmentByTag(tag) != null) {
-            transaction.show(fragmentManager.findFragmentByTag(tag)!!)
+        // Hide all cards
+        hideAllCards()
+
+        // Add or show fragment
+        val existingFragment = supportFragmentManager.findFragmentByTag(tag)
+        if (existingFragment != null) {
+            // Fragment already exists, just show it
+            supportFragmentManager.beginTransaction()
+                .hide(currentFragment!!)
+                .show(existingFragment)
+                .commit()
+            currentFragment = existingFragment
         } else {
-            transaction.add(R.id.features_grid, fragment, tag)
+            // Add new fragment
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container, fragment, tag)
+                .commit()
+            currentFragment = fragment
         }
-        
-        transaction.commit()
     }
-    
+
+    private fun hideAllCards() {
+        // This will be handled by the ScrollView automatically
+        // The cards will be scrolled out of view when fragment is shown
+    }
+
     override fun onBackPressed() {
-        // إذا كان المستخدم في شاشة الميزات، أغلق التطبيق
-        if (binding.bottomNavigation.selectedItemId == R.id.nav_quran) {
-            super.onBackPressed()
+        if (binding.fragmentContainer.visibility == View.VISIBLE) {
+            // If fragment is visible, hide it and show cards
+            binding.fragmentContainer.visibility = View.GONE
+            currentFragment = null
         } else {
-            // العودة إلى شاشة الميزات
-            binding.bottomNavigation.selectedItemId = R.id.nav_quran
+            super.onBackPressed()
         }
     }
 }
